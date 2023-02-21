@@ -1,0 +1,19 @@
+html
+  head
+    title University Student Directory - VM1
+  body
+    h1 University Student Directory - VM1
+    p Welcome to Student Directory, now powered by Azure Cosmos DB!
+    
+    table
+      tr
+        th Student Id
+        th First Name
+        th Last Name
+        th Course Enrolled
+      each pizza in pizzas
+        tr
+          td #{pizza.studentId}
+          td #{pizza.firstName}
+          td #{pizza.lastName}
+          td #{pizza.courses}
