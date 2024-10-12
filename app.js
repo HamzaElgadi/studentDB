@@ -38,8 +38,8 @@ const client = new CosmosClient({ endpoint, key})
 // Asynchronous function to query Cosmos DB for the pizza menu items
 async function findPizzas() {
     const { resources } = await client
-        .database(CloudMemories)
-        .container(memories)
+        .database(databaseId)
+        .container(containerId)
         .items.query('SELECT c.id,c.title,c.content FROM c')
         .fetchAll()
 
